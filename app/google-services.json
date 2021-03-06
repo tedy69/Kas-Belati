@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "465241435069",
+    "project_id": "kasbelati",
+    "storage_bucket": "kasbelati.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465241435069:android:ac698d1dd911fae8b480d4",
+        "android_client_info": {
+          "package_name": "com.catatancodingku.kas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465241435069-imsa86c3rq01tm3luif63lfmua0aoi6t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYO2jVE2UWC9ZA_UbpniuT6ftfVaUpIH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465241435069-imsa86c3rq01tm3luif63lfmua0aoi6t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465241435069:android:559248cffec10a44b480d4",
+        "android_client_info": {
+          "package_name": "tech.riseofdevelopers.kas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465241435069-imsa86c3rq01tm3luif63lfmua0aoi6t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYO2jVE2UWC9ZA_UbpniuT6ftfVaUpIH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465241435069-imsa86c3rq01tm3luif63lfmua0aoi6t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
