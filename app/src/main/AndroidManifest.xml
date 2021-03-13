@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tech.riseofdevelopers.kas">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,9 @@
         android:roundIcon="@drawable/ic_logo_app"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kas">
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".SplashscreenActivity"></activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
