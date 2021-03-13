@@ -11,15 +11,17 @@
         android:roundIcon="@drawable/ic_logo_app"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kas">
-        <activity android:name=".SplashscreenActivity"></activity>
+        <activity android:name=".SplashscreenActivity">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".LoginActivity">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
