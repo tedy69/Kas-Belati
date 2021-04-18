@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:background="?selectableItemBackground"
+    android:paddingVertical="18dp">
+
+    <ImageView
+        android:id="@+id/iv_status_transaksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_pemasukan" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:id="@+id/tv_name_transaksi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/product_sans_bold"
+            android:text="Beli Laptop mahal"
+            android:textColor="@color/hijau" />
+
+        <TextView
+            android:id="@+id/tv_date_transaksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senen, 20 Agustus 2020"
+            android:textColor="@color/hijau"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/tv_saldo_transaksi"
+        android:layout_width="match_parent"
+        android:layout_gravity=""
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/product_sans_bold"
+        android:text="Rp.500.000"
+        android:textAlignment="textEnd"
+        android:textColor="@color/hijau"
+        tools:ignore="RtlCompat" />
+
+
+</LinearLayout>

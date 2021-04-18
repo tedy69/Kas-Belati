@@ -19,19 +19,19 @@ class Preferences(val context: Context) {
         editor.apply()
     }
 
-//    fun setLongValue(key: String,value: Long){
-//        val editor: SharedPreferences.Editor = sharedPref.edit()
-//        editor.putLong(key, value)
-//        editor.apply()
-//    }
-//
-//    fun getValues(key: String): String? {
-//        return sharedPref.getString(key, "")
-//    }
-//
-//    fun getLongValues(key: String): Long {
-//        return sharedPref.getLong(key,0)
-//    }
+    fun setLongValue(key: String,value: Long){
+        val editor: SharedPreferences.Editor = sharedPref.edit()
+        editor.putLong(key, value)
+        editor.apply()
+    }
+
+    fun getValues(key: String): String? {
+        return sharedPref.getString(key, "")
+    }
+
+    fun getLongValues(key: String): Long {
+        return sharedPref.getLong(key,0)
+    }
 
     fun createSession() {
         val editor: SharedPreferences.Editor = sharedPref.edit()
@@ -39,11 +39,11 @@ class Preferences(val context: Context) {
         editor.apply()
     }
 
-//    fun logout() {
-//        val editor: SharedPreferences.Editor = sharedPref.edit()
-//        setValues("isLogin", "0")
-//        editor.clear()
-//        editor.apply()
-//    }
+    fun logout() {
+        val editor: SharedPreferences.Editor = sharedPref.edit()
+        setValues("isLogin", "0")
+        editor.clear()
+        editor.apply()
+    }
 
 }

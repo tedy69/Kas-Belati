@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".DetailTransaksiActivity">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:background="@color/colorPrimary"
@@ -15,84 +15,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <TextView
+        android:id="@+id/tv_title_appbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/avatar_one"
+        android:layout_marginTop="16dp"
+        android:text="Catat Transaksi"
+        android:textSize="24dp"
+        android:fontFamily="@font/fredoka_one"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_username_main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:fontFamily="@font/montserrat"
-        android:text="TextView"
-        android:textColor="@color/putih"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/tv_profesi_main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:fontFamily="@font/mlight"
-        android:text="TextView"
-        android:textColor="@color/putih"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_username_main" />
-
-    <LinearLayout
-        android:id="@+id/btn_logout"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:padding="4dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="wrap_content"
-        android:background="?selectableItemBackground"
-        android:gravity="center"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_out" />
-
-        <TextView
-            android:id="@+id/tv_logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/mlight"
-            android:text="logout"
-            android:textColor="@color/yellow"
-            android:textSize="12sp"/>
-
-    </LinearLayout>
-
-
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="24dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="7dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2">
-
+        app:layout_constraintTop_toTopOf="@+id/view2">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -121,7 +69,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_saldo_main" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_saldo_card" />
 
             <TextView
                 android:id="@+id/tv_username_main7"
@@ -134,10 +82,10 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_saldo_main" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_saldo_card" />
 
             <TextView
-                android:id="@+id/tv_saldo_main"
+                android:id="@+id/tv_saldo_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
@@ -148,7 +96,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_username_main4" />
 
             <TextView
-                android:id="@+id/tv_saldo_main2"
+                android:id="@+id/tv_saldo_card2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
@@ -159,7 +107,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_username_main6" />
 
             <TextView
-                android:id="@+id/tv_saldo_main3"
+                android:id="@+id/tv_saldo_card3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
@@ -180,41 +128,115 @@
                 app:srcCompat="@drawable/ic_logo_login" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_transaksi"
+
+    <TextView
+        android:id="@+id/tv_namaTransaksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="35dp"
+        android:text="Nama Transaksi"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/montserrat"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+    <EditText
+        android:id="@+id/ed_nama_transaksi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:clipToPadding="false"
+        android:background="@drawable/bg_textinput"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="8dp"
+        android:height="50dp"
+        android:inputType="text"
+        android:paddingVertical="14dp"
+        android:maxLines="1"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_namaTransaksi"
+        />
+
+    <TextView
+        android:id="@+id/tv_nominal_transaksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="12dp"
+        android:text="Nominal Transaksi"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/montserrat"
+        app:layout_constraintTop_toBottomOf="@+id/ed_nama_transaksi" />
+
+
+    <EditText
+        android:id="@+id/ed_nominal_transaksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_textinput"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="8dp"
+        android:height="50dp"
+        android:paddingHorizontal="12dp"
+        android:inputType="number"
+        android:paddingVertical="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nominal_transaksi"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_nominal_transaksi">
+
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/radio_pemasukan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/hijau"
+            android:text="pemasukan"
+            android:textColor="@color/hijau" />
+
+        <RadioButton
+            android:id="@+id/radio_pengeluaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:buttonTint="@color/merah"
+            android:text="pengeluaran"
+            android:textColor="@color/merah" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_simpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/fredoka_one"
+        android:text="simpan"
+        android:textSize="24sp"
+        android:layout_marginHorizontal="24dp"
         android:paddingVertical="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardView"
-        tools:listitem="@layout/item_rv_transaksi" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        android:src="@drawable/ic_add"
-        app:backgroundTint="@color/colorPrimary"
-        app:layout_anchor="@id/rv_transaksi"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:maxImageSize="32dp"
-        app:tint="@color/white" />
-
-<!--    <ProgressBar-->
-<!--        android:id="@+id/loader"-->
-<!--        android:layout_width="50dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/cardView" />-->
-
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
